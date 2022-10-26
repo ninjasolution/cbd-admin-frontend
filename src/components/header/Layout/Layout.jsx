@@ -68,7 +68,8 @@ function Layout({ open, setOpen }) {
         //   text: "Cultivation",
         //   link: "/",
         // },
-        user.roles.find(r => r.name == "admin") &&
+        user && user?.roles &&
+        user?.roles?.find(r => r.name == "admin") &&
         {
           icon: <HiLocationMarker width={30} height={30} />,
           text: "Contract",
