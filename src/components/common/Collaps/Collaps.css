@@ -1,0 +1,13 @@
+.complex-collaps-ans{
+    padding: 20px;
+    position: relative;
+}
+.complex-collaps-ans::after{
+    height: 100%;
+    position: absolute;
+    width: 2px;
+    background-color: #bfc51d;
+    content: "";
+    display: block;
+    top: 0;
+}

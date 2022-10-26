@@ -1,0 +1,137 @@
+:root {
+  --main-color: #bfc51d;
+  --main-color-hover: #9da21d;
+  --black-color: #323232;
+  --color-gray: #7d848f;
+  --color-gray-1: #e1e2e3;
+  --color-gray-2: #4b4b4b;
+  --color-gray-3: #e6e6e6;
+}
+
+.main-bg {
+  background-color: var(--main-color);
+}
+
+.my-bg-black {
+  background-color: var(--black-color);
+}
+
+.my-bg-2 {
+  background-color: var(--color-gray-2);
+}
+
+.my-bg-3 {
+  background-color: var(--color-gray-3);
+}
+
+.color-1 {
+  color: var(--color-gray);
+}
+
+.hover-transition {
+  transition: all 0.2s linear;
+}
+
+.hover-color1:hover {
+  color: var(--main-color-hover);
+}
+
+.color-2 {
+  color: var(--main-color);
+}
+
+.color-3 {
+  color: var(--color-gray-1);
+}
+
+.color-4 {
+  color: var(--color-gray-2);
+}
+
+.my-border-1 {
+  border-color: var(--main-color);
+}
+
+.style-scroll-bar::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+/* hover */
+.hover-bg-black-text-white:hover {
+  background-color: #4b4b4b;
+  color: white;
+}
+
+/* shadow */
+.my-shadow-1 {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+/* underline */
+.underline-main {
+  text-decoration-color: var(--main-color);
+}
+
+/* layout */
+.content {
+  background-image: url("./../src/images/bg.png");
+  background-position: 100% 0;
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+}
+
+footer {
+  border-top: 1px solid #e6e6e6;
+  color: #e1e2e3;
+  background-color: #fff;
+}
+
+body {
+  color: #4b4b4b;
+}
+
+/* swiper css */
+.swiper-wrapper {
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+hr {
+  border-top: 1px solid #e6e6e6;
+}
+
+.open-side {
+  width: 250px !important;
+  transition: all 0.3s;
+}
+.close-side {
+  width: 0px !important;
+  transition: all 0.3s;
+}
+.open-side_con {
+  margin-left: 250px !important;
+  transition: all 0.3s;
+}
+.close-side_con {
+  margin-left: 0px !important;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 640px) {
+  .open-side {
+    width: 100vw !important;
+    z-index: 1;
+  }
+}
+
+.web3modal-modal-lightbox { z-index: 999 !important; }

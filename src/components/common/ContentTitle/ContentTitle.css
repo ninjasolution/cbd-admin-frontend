@@ -1,0 +1,10 @@
+
+.content-title::before,.content-title::after{
+    content: "";
+    border: 1px solid #d5d5d5;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+.content-title::after{  
+    margin: 0 0 0 20px;
+}
