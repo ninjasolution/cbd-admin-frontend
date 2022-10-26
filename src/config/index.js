@@ -18,7 +18,7 @@ export const commonCBDNFTAddr = "0x376152909991F8Ce3F4e9E0f77fB82527cAC0FD1";
 
 export const seedPackCBDNFTAddr = "0x3D7fcAed58A6393D68573BFFFEB89a38d87A5121";
 
-export const backendLink = "http://localhost:8080"
+export const backendLink = "https://backend.fintecbull.com:27017"
 
 export const bscScan = "https://bscscan.com"
 
