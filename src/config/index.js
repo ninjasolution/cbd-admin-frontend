@@ -24,7 +24,7 @@ export const bscScan = "https://bscscan.com"
 
 export const RPCProvider = "https://avalanche-fuji.infura.io/v3/5c34343809f04bcb96e9a4aeaf19aeca";
 
-export const frontendLink = "http://localhost:3000"
+export const frontendLink = "https://cbd-admin-frontend.vercel.app"
 
 export const INFRA_ID = "5c34343809f04bcb96e9a4aeaf19aeca"
 

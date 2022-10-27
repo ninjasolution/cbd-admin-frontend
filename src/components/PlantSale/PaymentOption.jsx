@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { categories } from "../../config";
+import { categories, ownerAddress } from "../../config";
 import { BanckIcon, Minuse, MoneyIcon, PlushIcon } from "../../icons";
 import NFT from "../../abis/CBDNFT.json"
 import { createPostAction } from "../../store/actions/PostActions";
@@ -36,9 +36,10 @@ function PaymentOption() {
     if(!contract) {
       return formatError("Please wallet conenct")
     }
-    const tx = await contract.methods.batchMint(address, count).send({from: address})
+    const tx = await contract.methods.batchMint(address, count, ownerAddress).send({from: address})
     const data = {type: "Mint", amount: count, currency: collection.name, hash: tx.blockHash}
     dispatch(createPostAction("/api/transaction", data))
+    initialLoad();
 
   }
 

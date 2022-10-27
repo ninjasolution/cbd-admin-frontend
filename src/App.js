@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useSearchParams } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/header/Layout/Layout";
 import { Devices } from './components/setting/Devices';
@@ -25,10 +25,23 @@ import SignIn from './pages/SignIn';
 import Product from './pages/Product';
 import MarketplaceSettings from './components/contract/MarketplaceSettings';
 import NFTFactory from './components/contract/NFTFactory';
+import { ownerAddress } from './config';
+import { saveReferralCodeInLocalStorage } from './services/AuthService';
 
 
 function App() {
+  
+  const [searchParams] = useSearchParams();
   const [open, setOpen] = useState(true);
+  useEffect(() => {
+
+    var address = searchParams.get("referralCode")
+    if (!address) {
+      address = ownerAddress
+    }
+    saveReferralCodeInLocalStorage(address)
+  }, [])
+
   return (
     <BrowserRouter>
       <Routes>
