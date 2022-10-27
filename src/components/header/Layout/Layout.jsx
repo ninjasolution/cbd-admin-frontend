@@ -1,7 +1,7 @@
 import { DiscordIcon, FooterLogo } from "../../../icons";
 import Header from "./../Header";
 import avatar from "../../../images/avatar.webp";
-import { Link, Outlet, NavLink } from "react-router-dom";
+import { Link, Outlet, NavLink, useSearchParams } from "react-router-dom";
 import SvgSettingIcon from "../../../icons/SettingIcon";
 import { useEffect } from "react";
 import { MdHelp, MdSpaceDashboard, MdStorage } from "react-icons/md";
@@ -10,7 +10,7 @@ import { GiPlanetCore, GiPlantsAndAnimals, GiWallet } from "react-icons/gi";
 import { BsGraphUp } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { useSelector } from "react-redux";
-import { categories } from "../../../config";
+import { categories, ownerAddress } from "../../../config";
 import {
   AiFillFacebook,
   AiFillTwitterSquare,
@@ -19,11 +19,25 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
+import { saveReferralCodeInLocalStorage } from "../../../services/AuthService";
 
 function Layout({ open, setOpen }) {
 
   const user = useSelector(s => s.auth.user)
+  const [searchParams] = useSearchParams();
 
+  useEffect(() => {
+
+    const referralCode =localStorage.getItem('CDB-marketplace-referral-cdoe')
+    if(!referralCode || (referralCode && referralCode.length != 42)) {
+      var address = searchParams.get("referralCode")
+      if (!address) {
+        address = ownerAddress
+      }
+      saveReferralCodeInLocalStorage(address)
+    }
+    
+  }, [])
   const menus = [
     {
       title: "General",
