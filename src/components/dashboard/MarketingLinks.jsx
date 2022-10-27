@@ -21,7 +21,7 @@ function MarketingLinks() {
             <p className="flex space-x-2">
               <EmailIcon width={12} />{" "}
               <a href={`${frontendLink}?referralCode=${user?.walletAddress}`}>
-                {`${frontendLink}`}
+                {`${frontendLink}?referralCode=${user?.walletAddress}`}
               </a>
             </p>
           </div>

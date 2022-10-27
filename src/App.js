@@ -30,16 +30,20 @@ import { saveReferralCodeInLocalStorage } from './services/AuthService';
 
 
 function App() {
-  
+
   const [searchParams] = useSearchParams();
   const [open, setOpen] = useState(true);
   useEffect(() => {
 
-    var address = searchParams.get("referralCode")
-    if (!address) {
-      address = ownerAddress
+    const referralCode =localStorage.getItem('CDB-marketplace-referral-cdoe')
+    if(!referralCode || (referralCode && referralCode.length != 42)) {
+      var address = searchParams.get("referralCode")
+      if (!address) {
+        address = ownerAddress
+      }
+      saveReferralCodeInLocalStorage(address)
     }
-    saveReferralCodeInLocalStorage(address)
+    
   }, [])
 
   return (
