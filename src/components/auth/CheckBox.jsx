@@ -1,12 +1,14 @@
 import React from 'react';
 
-const CheckBox = ({label, right, onChange}) => {
+const CheckBox = ({ label, right, onChange, top }) => {
   return (
-    <div className='bg-gray-200 mb-2'>
-        <div className={`py-2 px-4 flex gap-3 ${right && 'justify-end'} items-baseline`}>
-        <input type="checkbox" id="scales" name="scales" required onChange={e => onChange(e.target.checked)}/>
-        <label htmlFor="scales">{label}</label>
+    <div className='mb-2'>
+
+      <div className={`flex gap-3 ${right && 'justify-end'} ${!top && 'items-content'}`}>
+        <input type="checkbox" value="" className="w-5 h-5" required onChange={e => onChange(e.target.checked)}/>
+        <label  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{label}</label>
       </div>
+
     </div>
   );
 };

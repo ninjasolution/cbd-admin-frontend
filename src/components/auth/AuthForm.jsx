@@ -80,19 +80,19 @@ const AuthForm = () => {
             <AuthInput label={"Sponsor"} type={"text"} id={"sponsor"} setState={value => setSponsor(value)} />
           </div>
 
-          <div className='flex gap-4 justify-center items-end p-4'>
+          <div className='flex flex-col md:flex-row gap-4 items-end p-3'>
             <AuthInput label={"Wallet Address"} type={"text"} id={"walletAddress"} setState={value => setWalletAddr(value)} fullWidth />
           </div>
 
         </div>
         {/* check box */}
-        <div className="terms__conditions">
+        <div className="terms__conditions px-4 py-3">
 
           <CheckBox label={
             <p className='text-right'>
               I agree with the <strong> Terms and Conditions</strong> , <strong>Terms of Service</strong> and <br /> <strong>Privacy policy</strong>
             </p>
-          } right />
+          } right top/>
           <CheckBox label={
             <p>I want to receive additional news and offers via e-mail.</p>
           } right onChange={value => setEmailSetting(value)} />

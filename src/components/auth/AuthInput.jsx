@@ -40,14 +40,16 @@ const AuthInput = ({ label, type, icon, id, fullWidth, setState, value }) => {
         </div>
       ) : (
         <>
-          <label htmlFor={id}>{label}</label>
+         <label htmlFor={id} className="capitalize">
+            {label}
+          </label>
           <input
             type={type}
             name={id}
             defaultValue={value}
             id={id}
             onChange={e => setState(e.target.value)}
-            className="border w-full border-[#bfc51d] px-3 py-1 focus:outline-none focus:ring  focus:ring-[#e4eb4185]"
+            className="border w-full border-[#969b18] mt-2 px-3 py-1 focus:outline-none focus:ring  focus:ring-[#e4eb4185]"
             placeholder={`Enter ${label}`}
             required
           />

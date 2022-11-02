@@ -210,7 +210,7 @@ function Layout({ open, setOpen }) {
                     {data.menuList.filter(m => m).map((el, j) => (
                       <div
                         key={j}
-                        className="py-3 border-l-4 border-transparent "
+                        className="border-l-4 border-transparent "
                       >
                         <NavLink
                           className={({ isActive }) =>

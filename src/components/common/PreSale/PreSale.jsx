@@ -18,7 +18,7 @@ function PreSale() {
           </p>
         </div>
       </div>
-      <div className="pr-5 mt-4 sm:mt-0">
+      <div className="pr-5 mt-4 sm:mt-0 cursor-pointer">
         <RightArrowIcon width={30} />
       </div>
     </div>

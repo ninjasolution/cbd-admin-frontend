@@ -5,7 +5,7 @@ function SimpleCollaps({ data }) {
   const [open, setOpen] = useState(data?.show || false);
   return (
     <div
-      className={` mb-5 overflow-hidden my-shadow-1 ease-in-out duration-300 bg-white`}
+      className={` mb-1 overflow-hidden my-shadow-1 ease-in-out duration-300 bg-white`}
     >
       <div
         onClick={() => setOpen(!open)}
